@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ogc.menarini.GestioneFarmaci.Interface.InterfacciaPrincipaleFarmacista">
+   <children>
+      <GridPane prefHeight="800.0" prefWidth="1280.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="210.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="210.0" minHeight="10.0" prefHeight="127.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="415.0" minHeight="10.0" prefHeight="243.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="382.0" minHeight="10.0" prefHeight="308.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="214.0" prefWidth="896.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2"  GridPane.valignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#cliccaCercaFarmaco" prefHeight="150.0" prefWidth="150.0" styleClass="circlebtn" text="Ordina Farmaco" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Cerca un farmaco per poterlo ordinare" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#cliccaVisualizzaOrdini" prefHeight="150.0" prefWidth="150.0" styleClass="circlebtn" text="Visualizza Ordini" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Visualizza tutti gli ordini effettuati" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#cliccaScaricoMerci" prefHeight="150.0" prefWidth="150.0" styleClass="circlebtn" text="Scarico Merci" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Scarica la merce" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#cliccaCercaFarmacoPeriodico" prefHeight="150.0" prefWidth="150.0" styleClass="circlebtn" text="Ordina Farmaco Periodico" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Cerca un farmaco per poterlo ordinare in modo periodico" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#cliccaVisualizzaOrdiniPeriodici" prefHeight="150.0" prefWidth="150.0" styleClass="circlebtn" text="Visualizza Ordini Periodici" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Modifica la quantita di farmaci consegnata periodicamente" />
+                     </tooltip>
+                  </Button>                  
+                  <Button mnemonicParsing="false" onAction="#cliccaModificaIdFarmacia" prefHeight="150.0" prefWidth="150.0" styleClass="circlebtn" text="Inizializza ID Farmacia" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Inizializza ID Farmacia" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="orologio" prefHeight="30.0" prefWidth="214.0" text="Lunedi 9 Maggio 8:00 " GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomeUtente" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="519.0" text="Francesco" textAlignment="RIGHT" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="SansSerif Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</Pane>
